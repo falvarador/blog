@@ -1,0 +1,74 @@
+@import "./color.css";
+
+:root {
+  --accent-color-1: var(--teal-50);
+  --accent-color-2: var(--teal-100);
+  --accent-color-3: var(--teal-200);
+  --accent-color-4: var(--teal-300);
+  --accent-color-5: var(--teal-400);
+  --accent-color-6: var(--teal-500);
+  --accent-color-7: var(--teal-600);
+  --accent-color-8: var(--teal-700);
+  --accent-color-9: var(--teal-800);
+  --accent-color-10: var(--teal-900);
+  --accent-color-11: var(--teal-950);
+
+  --neutral-color-1: var(--slate-50);
+  --neutral-color-2: var(--slate-100);
+  --neutral-color-3: var(--slate-200);
+  --neutral-color-4: var(--slate-300);
+  --neutral-color-5: var(--slate-400);
+  --neutral-color-6: var(--slate-500);
+  --neutral-color-7: var(--slate-600);
+  --neutral-color-8: var(--slate-700);
+  --neutral-color-9: var(--slate-800);
+  --neutral-color-10: var(--slate-900);
+  --neutral-color-11: var(--slate-950);
+
+  --error-color-1: var(--red-50);
+  --error-color-2: var(--red-100);
+  --error-color-3: var(--red-200);
+  --error-color-4: var(--red-300);
+  --error-color-5: var(--red-400);
+  --error-color-6: var(--red-500);
+  --error-color-7: var(--red-600);
+  --error-color-8: var(--red-700);
+  --error-color-9: var(--red-800);
+  --error-color-10: var(--red-900);
+  --error-color-11: var(--red-950);
+
+  --success-color-1: var(--green-50);
+  --success-color-2: var(--green-100);
+  --success-color-3: var(--green-200);
+  --success-color-4: var(--green-300);
+  --success-color-5: var(--green-400);
+  --success-color-6: var(--green-500);
+  --success-color-7: var(--green-600);
+  --success-color-8: var(--green-700);
+  --success-color-9: var(--green-800);
+  --success-color-10: var(--green-900);
+  --success-color-11: var(--green-950);
+
+  --warning-color-1: var(--yellow-50);
+  --warning-color-2: var(--yellow-100);
+  --warning-color-3: var(--yellow-200);
+  --warning-color-4: var(--yellow-300);
+  --warning-color-5: var(--yellow-400);
+  --warning-color-6: var(--yellow-500);
+  --warning-color-7: var(--yellow-600);
+  --warning-color-8: var(--yellow-700);
+  --warning-color-9: var(--yellow-800);
+  --warning-color-10: var(--yellow-900);
+  --warning-color-11: var(--yellow-950);
+
+  --info-color-1: var(--blue-50);
+  --info-color-2: var(--blue-100);
+  --info-color-3: var(--blue-200);
+  --info-color-4: var(--blue-300);
+  --info-color-5: var(--blue-400);
+  --info-color-6: var(--blue-500);
+  --info-color-7: var(--blue-600);
+  --info-color-8: var(--blue-700);
+  --info-color-9: var(--blue-800);
+  --info-color-10: var(--blue-900);
+}
