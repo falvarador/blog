@@ -1,0 +1,25 @@
+astro-heart {
+  & button {
+    color: var(--accent-color-8);
+    font-size: 1.5rem;
+    line-height: 1;
+    position: relative;
+  }
+
+  & button:hover {
+    color: orange;
+  }
+
+  & button:focus {
+    color: orange;
+  }
+
+  & button span {
+    color: tomato;
+    font-size: 0.5rem;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

@@ -1,4 +1,9 @@
-@import "./color.css";
+@import "./color-schemes/teal.css";
+@import "./color-schemes/slate.css";
+@import "./color-schemes/red.css";
+@import "./color-schemes/green.css";
+@import "./color-schemes/yellow.css";
+@import "./color-schemes/blue.css";
 
 :root {
   --accent-color-1: var(--teal-50);
