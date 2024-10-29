@@ -1,11 +1,86 @@
 ---
 import Layout from "@/shared/layout.astro";
+
+const pageTitle = "Sobre mi";
+
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Escritor técnico",
+  hobbies: ["fotografia", "observación de aves", "peñarol"],
+};
+
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Astro",
+  "Redacción de documentos",
+];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
-<Layout>
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
+<style>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
 
-  <h1>My Astro Learning Blog</h1>
-  <p>This is where I will post about my journey learning Astro.</p>
+  .skill {
+    color: green;
+    font-weight: bold;
+  }
+</style>
+
+<Layout title={pageTitle}>
+  <a href="/">Inicio</a>
+  <a href="/about/">Sobre mi</a>
+  <a href="/blog/">Blog</a>
+
+  <title>{pageTitle}</title>
+  <h2>... ¡y mi nuevo sitio Astro!</h2>
+
+  <p>
+    Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda
+    página de mi sitio web, ¡y es la primera que he construido yo mismo!
+  </p>
+
+  <p>
+    Este sitio se irá actualizando a medida que vaya completando más partes del
+    tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!
+  </p>
+
+  <p>He aquí algunos datos sobre mí:</p>
+  <ul>
+    <li>Me llamo {identity.firstName}.</li>
+    <li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+    {
+      identity.hobbies.length >= 2 && (
+        <li>
+          Dos de mis aficiones son: {identity.hobbies[0]} y{" "}
+          {identity.hobbies[1]}
+        </li>
+      )
+    }
+  </ul>
+  <p>Mis habilidades son:</p>
+  <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
+
+  {happy && <p>¡Estoy feliz de aprender Astro!</p>}
+
+  {finished && <p>¡He terminado este tutorial!</p>}
+
+  {
+    goal === 3 ? (
+      <p>Mi objetivo es terminar en 3 días.</p>
+    ) : (
+      <p>Mi objetivo no son 3 días.</p>
+    )
+  }
 </Layout>
