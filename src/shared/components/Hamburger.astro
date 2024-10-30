@@ -1,0 +1,40 @@
+---
+
+---
+
+<hamburger-menu class="hamburger">
+  <span class="line"></span>
+  <span class="line"></span>
+  <span class="line"></span>
+  <!-- <slot name="nav-links" /> -->
+</hamburger-menu>
+
+<script>
+  class HamburgerMenu extends HTMLElement {
+    navLinks: HTMLSlotElement;
+
+    constructor() {
+      super();
+
+      this.navLinks = this.querySelector("slot[name='nav-links']");
+    }
+
+    connectedCallback() {
+      this.addEventListener("click", this);
+    }
+
+    disconnectedCallback() {
+      this.removeEventListener("click", this);
+    }
+
+    handleEvent(event: Event) {
+      if (event.type === "click") {
+        document.querySelector(".nav-links")?.classList.toggle("expanded");
+        // console.log(this.navLinks);
+        // this.navLinks?.classList.toggle("expanded");
+      }
+    }
+  }
+
+  customElements.define("hamburger-menu", HamburgerMenu);
+</script>
