@@ -32,6 +32,17 @@
   }
 }
 
+@layer dark-mode {
+  html.dark {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .dark .nav-links a {
+    color: #fff;
+  }
+}
+
 @layer base {
   h1 {
     margin: 1rem 0;
@@ -78,7 +89,9 @@
   .expanded {
     display: unset;
   }
+}
 
+@layer responsive {
   @media screen and (min-width: 636px) {
     .hamburger {
       display: none;

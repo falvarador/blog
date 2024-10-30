@@ -6,7 +6,6 @@
   <span class="line"></span>
   <span class="line"></span>
   <span class="line"></span>
-  <!-- <slot name="nav-links" /> -->
 </hamburger-menu>
 
 <script>
@@ -16,7 +15,7 @@
     constructor() {
       super();
 
-      this.navLinks = this.querySelector("slot[name='nav-links']");
+      this.navLinks = document.querySelector(".nav-links");
     }
 
     connectedCallback() {
@@ -29,9 +28,7 @@
 
     handleEvent(event: Event) {
       if (event.type === "click") {
-        document.querySelector(".nav-links")?.classList.toggle("expanded");
-        // console.log(this.navLinks);
-        // this.navLinks?.classList.toggle("expanded");
+        this.navLinks?.classList.toggle("expanded");
       }
     }
   }
