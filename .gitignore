@@ -1,19 +1,23 @@
 # build output
 dist/
+
 # generated types
 .astro/
 
 # dependencies
-deno.lock
 node_modules/
+
+# lock files
+deno.lock
 package-lock.json
+pnpm-lock.yaml
+yarn.lock
 
 # logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
 
 # environment variables
 .env

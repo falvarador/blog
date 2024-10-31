@@ -1,20 +1,42 @@
 ---
 import Social from "@/shared/components/Social.astro";
+import ThemeToggle from "@/shared/components/ThemeToggle.astro";
 
-const platform = "github";
-const username = "withastro";
+const today = new Date();
 ---
 
 <style>
   footer {
+    padding: 2em 1em 6em 1em;
+    background: linear-gradient(var(--gray-gradient)) no-repeat;
+    color: rgb(var(--gray));
+    text-align: center;
+  }
+
+  .social-links {
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 1em;
+  }
+
+  .social-links a {
+    text-decoration: none;
+    color: rgb(var(--gray));
+  }
+
+  .social-links a:hover {
+    color: rgb(var(--gray-dark));
   }
 </style>
 
 <footer>
-  <Social platform="twitter" username="freddyalvarador" />
-  <Social platform="github" username="falvarador" />
-  <Social platform="youtube" username="@falvarador" />
+  <ThemeToggle />
+
+  <h5>{today.getFullYear()} @Aprendiendo - Blog</h5>
+  <div class="social-links">
+    <Social platform="twitter" username="freddyalvarador" />
+    <Social platform="github" username="falvarador" />
+    <Social platform="youtube" username="@falvarador" />
+  </div>
 </footer>

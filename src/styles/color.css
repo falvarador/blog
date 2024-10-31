@@ -1,22 +1,22 @@
-@import "./color-schemes/teal.css";
-@import "./color-schemes/slate.css";
-@import "./color-schemes/red.css";
-@import "./color-schemes/green.css";
-@import "./color-schemes/yellow.css";
 @import "./color-schemes/blue.css";
+@import "./color-schemes/green.css";
+@import "./color-schemes/red.css";
+@import "./color-schemes/slate.css";
+@import "./color-schemes/indigo.css";
+@import "./color-schemes/yellow.css";
 
 :root {
-  --accent-color-1: var(--teal-50);
-  --accent-color-2: var(--teal-100);
-  --accent-color-3: var(--teal-200);
-  --accent-color-4: var(--teal-300);
-  --accent-color-5: var(--teal-400);
-  --accent-color-6: var(--teal-500);
-  --accent-color-7: var(--teal-600);
-  --accent-color-8: var(--teal-700);
-  --accent-color-9: var(--teal-800);
-  --accent-color-10: var(--teal-900);
-  --accent-color-11: var(--teal-950);
+  --accent-color-1: var(--indigo-50);
+  --accent-color-2: var(--indigo-100);
+  --accent-color-3: var(--indigo-200);
+  --accent-color-4: var(--indigo-300);
+  --accent-color-5: var(--indigo-400);
+  --accent-color-6: var(--indigo-500);
+  --accent-color-7: var(--indigo-600);
+  --accent-color-8: var(--indigo-700);
+  --accent-color-9: var(--indigo-800);
+  --accent-color-10: var(--indigo-900);
+  --accent-color-11: var(--indigo-950);
 
   --neutral-color-1: var(--slate-50);
   --neutral-color-2: var(--slate-100);
