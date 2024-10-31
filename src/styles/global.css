@@ -21,9 +21,9 @@
   }
 
   body {
-    background-color: Canvas;
+    /* background-color: Canvas;
     color-scheme: light dark;
-    color: CanvasText;
+    color: CanvasText; */
     line-height: 1.5;
     margin: 0 auto;
     max-width: 80ch;
