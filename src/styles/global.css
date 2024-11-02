@@ -6,7 +6,7 @@
 }
 
 @layer tokens {
-  :root {
+  /* :root {
     --lm-accent: var(--accent-color-6);
     --lm-accent-dark: var(--accent-color-9);
     --lm-black: 15, 18, 25;
@@ -38,7 +38,7 @@
     --gray-gradient: var(--lm-gray-gradient);
     --box-shadow: var(--lm-box-shadow);
     color-scheme: light;
-  }
+  } */
 }
 
 @layer reset {
