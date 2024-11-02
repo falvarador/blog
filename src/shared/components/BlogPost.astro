@@ -1,10 +1,45 @@
 ---
-interface Props {
-  title: string;
-  url: string;
-}
+import { getImage, Image } from "astro:assets";
+import { getEntry, type CollectionEntry } from "astro:content";
 
-const { title, url } = Astro.props;
+type Props = {
+  post: CollectionEntry<"posts">;
+};
+
+const { post } = Astro.props;
+
+const { author, description, title, pubDate } = post.data;
+
+const { data: authorInfo } = await getEntry("authors", author.id);
+const optimizedImage = await getImage({
+  src: authorInfo.headshot,
+  format: "webp",
+  inferSize: true,
+});
 ---
 
-<li><a href={url}>{title}</a></li>
+<article class="post-card">
+  <div>
+    <h2>{title}</h2>
+    <div class="meta">
+      <Image
+        src={optimizedImage.src}
+        alt={authorInfo.name}
+        width={48}
+        height={48}
+      />
+      <p>{authorInfo.name}</p>
+      <span>•</span>
+      <time datetime={pubDate.toISOString()}
+        >{
+          pubDate.toLocaleDateString(undefined, {
+            dateStyle: "medium",
+            timeZone: "UTC",
+          })
+        }</time
+      >
+    </div>
+  </div>
+  <p>{description}</p>
+  <a href={`/posts/${post.slug}`} class="btn">Read Post</a>
+</article>

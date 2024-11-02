@@ -1,9 +1,13 @@
 ---
+import { getCollection } from "astro:content";
+
 import Layout from "@/shared/layouts/Layout.astro";
 
 import BlogPost from "@/shared/components/BlogPost.astro";
 
-const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
+const allPosts = await getCollection("posts", ({ data }) =>
+  import.meta.env.PROD ? data.isDraft !== true : true
+);
 ---
 
 <Layout title="Blog">
@@ -11,10 +15,6 @@ const posts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
   <p>Aquí es donde publicaré sobre mi viaje de aprendizaje Astro.</p>
 
   <ul>
-    {
-      posts.map((post) => (
-        <BlogPost url={post.url} title={post.frontmatter.title} />
-      ))
-    }
+    {allPosts.map((post) => <BlogPost post={post} />)}
   </ul>
 </Layout>
