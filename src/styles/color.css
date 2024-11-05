@@ -2,6 +2,7 @@
 @import "./color-schemes/green.css";
 @import "./color-schemes/red.css";
 @import "./color-schemes/slate.css";
+@import "./color-schemes/stone.css";
 @import "./color-schemes/indigo.css";
 @import "./color-schemes/yellow.css";
 
@@ -76,4 +77,7 @@
   --info-color-8: var(--blue-700);
   --info-color-9: var(--blue-800);
   --info-color-10: var(--blue-900);
+
+  --dark--background-color: var(--stone-950);
+  --dark--color: var(--stone-50);
 }
