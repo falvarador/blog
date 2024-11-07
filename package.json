@@ -1,20 +1,20 @@
 {
-  "name": "blog",
+  "name": "blog-2",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "astro": "astro",
-    "build": "astro check && astro build",
-    "denx": "deno run -A --node-modules-dir",
     "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
     "preview": "astro preview",
-    "start": "astro dev"
+    "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/cloudflare": "^11.2.0",
+    "@astrojs/mdx": "^3.1.9",
     "@astrojs/rss": "^4.0.9",
-    "astro": "^4.16.8",
+    "@astrojs/sitemap": "^3.2.1",
+    "astro": "^4.16.10",
+    "@astrojs/check": "^0.9.4",
     "typescript": "^5.6.3"
   }
 }
